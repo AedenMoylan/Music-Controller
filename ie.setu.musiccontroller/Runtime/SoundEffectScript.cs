@@ -6,6 +6,8 @@ public class SoundEffectScript : MonoBehaviour
 {
     public AudioSource SoundEffect;
     public string keyForAudioLowercase;
+
+
     // Start is called before the first frame update
     void Start()
     {
