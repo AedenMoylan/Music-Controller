@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundEffectScript : MonoBehaviour
 {
     public AudioSource SoundEffect;
+    public string keyForAudioLowercase;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class SoundEffectScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(keyForAudioLowercase))
         {
             AudioClip clip = SoundEffect.clip;
             SoundEffect.PlayOneShot(clip);
