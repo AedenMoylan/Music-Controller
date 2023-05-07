@@ -9,6 +9,7 @@ using UnityEditor.SearchService;
 public class MusicController : MonoBehaviour
 {
     public AudioSource audioSource;
+    public GameObject movingObject;
     //public AudioMixer mixer;
     public float pitchIncreaseSpeed;
     public float maxPitch;
@@ -26,14 +27,14 @@ public class MusicController : MonoBehaviour
     {
         audioSource.Play();
         player = this.gameObject;
-        rb = player.GetComponent<Rigidbody2D>();
+        rb = movingObject.GetComponent<Rigidbody2D>();
         isLowHealthMusicPlaying = false;       
     }
 
     // Update is called once per frame
     void Update()
     {
-        var scripts = GetComponents<MonoBehaviour>();
+        var scripts = movingObject.GetComponents<MonoBehaviour>();
 
         for (int i = 0; i < scripts.Length; i++)
         {
