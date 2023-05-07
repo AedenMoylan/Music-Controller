@@ -1,6 +1,6 @@
 {
     "name": "ie.setu.musiccontroller",
-    "version": "0.1.7",
+    "version": "1.0.0",
     "displayName": "MusicController",
     "description": "different features and options for music and Audio.",
     "unity": "2021.3"
